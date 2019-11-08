@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="address"
+		class="com.bridgelabz.autowire.byconstructor.Address">
+		<constructor-arg name="city" value="Mumbai" />
+		<constructor-arg name="state" value="Thane" />
+		<constructor-arg name="zip" value="421201" />
+	</bean>
+
+	<bean id="emp"
+		class="com.bridgelabz.autowire.byconstructor.Employee"
+		autowire="constructor">
+		<constructor-arg name="id" value="01" />
+		<constructor-arg name="name" value="Lokesh Patil" />
+	</bean>
+
+</beans>
